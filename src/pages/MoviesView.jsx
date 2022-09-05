@@ -64,7 +64,7 @@ const MoviesView = () => {
         <MoviesList itemsData={items}/>
         {isMoviesPresent && <button className={s.button} onClick={loadMore}>load more</button>}
         {noResult && <p className={s.warning}>Sorry, we didn't find any movies for your search: {q}</p>}
-        {error && <p>Failed to upload movies.</p>}
+        {error && <p className={s.warning}>Failed to upload movies.</p>}
       </div>
     );
   };

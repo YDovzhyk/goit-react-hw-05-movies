@@ -73,8 +73,8 @@ const Reviews = () => {
                 </li>
                 ))}
             </ul>
-            {error && <p>Failed to upload movies.</p>}
-            {noResult && <p>Sorry, we didn't find the reviews information</p>}
+            {error && <p className={s.warning}>Failed to upload movies.</p>}
+            {noResult && <p className={s.warning}>Sorry, we didn't find the reviews information</p>}
         </div>  
     )
 }

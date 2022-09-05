@@ -60,7 +60,7 @@ const MovieDetailsView = () => {
                 <Link className={s.outlet} state={{from}} to={reviewsLink}>Rewiews</Link>
                 <Outlet />
             </>)}
-            {error && <p>Failed to upload movies.</p>}
+            {error && <p className={s.warning}>Failed to upload movies.</p>}
         </div>
     )
 }
