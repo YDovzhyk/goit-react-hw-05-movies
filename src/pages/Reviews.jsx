@@ -31,19 +31,22 @@ const Reviews = () => {
             }
     }, [id]);
     
-    let noResult = "";
-    if(items.length === 0) {
-        noResult = true;
+    let noResult = true;
+    function getContent (content) {
+        if(content) {
+            noResult = false;
+            return content;
+        }
     }
 
     let finalLinkAvatar = '';
     function getAvatar (author_details) {
-    if(author_details.avatar_path) {
-        const replaceText = '/https://www.gravatar.com/avatar';
-        const addText = 'https://gravatar.com/avatar'
-        const linkAvatar = author_details.avatar_path;
-        finalLinkAvatar = addText.concat(linkAvatar.replace((new RegExp(replaceText, "g")), ''));
-        return finalLinkAvatar;
+        if(author_details.avatar_path) {
+            const replaceText = '/https://www.gravatar.com/avatar';
+            const addText = 'https://gravatar.com/avatar'
+            const linkAvatar = author_details.avatar_path;
+            finalLinkAvatar = addText.concat(linkAvatar.replace((new RegExp(replaceText, "g")), ''));
+            return finalLinkAvatar;
         } else {
             return finalLinkAvatar = 'https://gravatar.com/avatar/1kks3YnVkpyQxzw36CObFPvhL5f.jpg'
         }
@@ -62,7 +65,7 @@ const Reviews = () => {
                             <li key={id} className={s.reviewsBlock}>
                                 <img src={`${getAvatar(author_details)}`} alt="User avatar" className={s.imgAvatar} />
                                 <h3>{author}</h3>
-                                <p>{content}</p>
+                                <p>{getContent(content)}</p>
                             </li>
                             ))}
                         </ul>

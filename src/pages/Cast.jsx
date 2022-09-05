@@ -31,9 +31,12 @@ const Cast = () => {
         }
     }, [id]);
 
-    let noResult = "";
-    if(items.length === 0) {
-        noResult = true;
+    let noResult = true;
+    function getContent (name) {
+        if(name) {
+            noResult = false;
+            return name;
+        }
     }
 
     return (
@@ -47,7 +50,7 @@ const Cast = () => {
                         <ul>
                             {cast.map(({id, name}) => (
                             <li key={id}>
-                            <p>{name}</p>
+                            <p>{getContent(name)}</p>
                             </li>
                             ))}
                         </ul>
@@ -56,7 +59,7 @@ const Cast = () => {
                 ))}
             </ul>
             {error && <p>Failed to upload movies.</p>}
-            {!noResult && <p>Sorry, we didn't find the cast information</p>}
+            {noResult && <p>Sorry, we didn't find the cast information</p>}
         </div>  
     )
 }
