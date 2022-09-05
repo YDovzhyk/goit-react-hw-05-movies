@@ -71,7 +71,7 @@ const Reviews = () => {
                 ))}
             </ul>
             {error && <p>Failed to upload movies.</p>}
-            {!noResult && <p>Sorry, we didn't find the reviews information</p>}
+            {noResult && <p>Sorry, we didn't find the reviews information</p>}
         </div>  
     )
 }
