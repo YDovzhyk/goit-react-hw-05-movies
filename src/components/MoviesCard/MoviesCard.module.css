@@ -1,0 +1,59 @@
+.container {
+    padding: 0;
+}
+.movieDetail {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    border-bottom: 4px solid rgb(34, 88, 88);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.button {
+    width: 110px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: rgb(34, 88, 88);
+    color: aliceblue;
+}
+.loader {
+    margin-right: auto;
+    margin-left: auto;
+}
+.img {
+    width: 400px;
+    height: 600px;
+    margin-bottom: 25px;
+}
+.movieDetailList {
+    margin-left: 25px;
+}
+.cast {
+    list-style-type: none;
+}
+.castContainer {
+    padding: 0;
+}
+.outlet {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 24px;
+    color: rgb(34, 88, 88);
+}
+.castTitle {
+    margin: 0;
+    margin-top: 25px;
+}
+.castList {
+    padding: 0;
+}
+.reviewsBlock {
+    margin-bottom: 20px;
+    list-style-type: none;
+    border-bottom: 2px solid rgb(34, 88, 88);
+}
