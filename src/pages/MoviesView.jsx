@@ -53,7 +53,7 @@ const MoviesView = () => {
   const isMoviesPresent = Boolean(items.length);
 
   let noResult = "";
-  if(items.length === 0 && q === null && !loading) {
+  if(items.length === 0 && q !== null && !loading) {
       noResult = true;
   }
 
@@ -63,7 +63,7 @@ const MoviesView = () => {
         {loading && <Loader/>}
         <MoviesList itemsData={items}/>
         {isMoviesPresent && <button className={s.button} onClick={loadMore}>load more</button>}
-        {!noResult && <p className={s.warning}>Sorry, we didn't find any movies for your search: {q}</p>}
+        {noResult && <p className={s.warning}>Sorry, we didn't find any movies for your search: {q}</p>}
         {error && <p>Failed to upload movies.</p>}
       </div>
     );
