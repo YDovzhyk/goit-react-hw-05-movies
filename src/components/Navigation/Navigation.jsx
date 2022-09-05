@@ -3,7 +3,7 @@ import items from "./items"
 import s from './Navigation.module.css';
 
 const getClassName = ({isActive}) => {
-    return isActive ? `${s.link} ${s.active}` : s.link; 
+    return isActive ? `${s.link} ${s.active}`: s.link; 
 }
 
 const Navigation = () => {

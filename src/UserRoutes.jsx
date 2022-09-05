@@ -16,8 +16,9 @@ const UserRoutes = () => {
                 <Route path="/" element={<HomeView />} />
                 <Route path="/movies" element={<MoviesView />} />
                 <Route path="/movies/:id" element={<MovieDetailsView />}>
-                    <Route path="Cast" element={<Cast />} />
-                    <Route path="Reviews" element={<Reviews />} />
+                <Route path="Cast" element={<Cast />} />
+                <Route path="Reviews" element={<Reviews />} />
+                
                 </Route>
                 <Route path="*" element={<NotFoundPage />} />
             </Routes>
